@@ -1,4 +1,4 @@
-package app.devdeeds.com.myapplication;
+package app.devdeeds.com.yourapplication;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import app.devdeeds.com.myapplication.R;
 
 public class SpinnerAdapter extends ArrayAdapter<String> {
 
@@ -46,6 +48,10 @@ public class SpinnerAdapter extends ArrayAdapter<String> {
         View row = mInflater.inflate(R.layout.adapter_spinner, parent, false);
         TextView label = (TextView) row.findViewById(R.id.list_item);
         label.setText(mData.get(position).toString());
+
+        row.setTag(R.string.meta_position, Integer.toString(position));
+        row.setTag(R.string.meta_title, mData.get(position).toString());
+
         return row;
     }
 }

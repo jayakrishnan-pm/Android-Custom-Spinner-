@@ -1,4 +1,4 @@
-package app.devdeeds.com.myapplication;
+package app.devdeeds.com.yourapplication;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
